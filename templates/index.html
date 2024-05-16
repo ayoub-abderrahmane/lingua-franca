@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" width="100" height="100">
+        <h1>language translation</h1>
+        <form method="POST">
+            <div class="translation-section">
+                <div class="input-section">
+                    <select name="source_language">
+                        <option value="auto" {% if source_language == 'auto' %}selected{% endif %}>Détection automatique</option>
+                        <option value="en" {% if source_language == 'en' %}selected{% endif %}>Anglais</option>
+                        <option value="fr" {% if source_language == 'fr' %}selected{% endif %}>Français</option>
+                        <option value="es" {% if source_language == 'es' %}selected{% endif %}>Espagnol</option>
+                        <option value="de" {% if source_language == 'de' %}selected{% endif %}>Allemand</option>
+                        <option value="it" {% if source_language == 'it' %}selected{% endif %}>Italien</option>
+                        <option value="pt" {% if source_language == 'pt' %}selected{% endif %}>Portugais</option>
+                        <option value="pl" {% if source_language == 'pl' %}selected{% endif %}>polonais</option>
+                    </select>
+                    <textarea name="text_to_translate" rows="10" cols="35" required placeholder="Entrez le texte à traduire ici...">{{ text_to_translate }} </textarea>
+                </div>
+                <div class="output-section">
+                    <select name="target_language">
+                        <option value="en" {% if target_language == 'en' %}selected{% endif %}>Anglais</option>
+                        <option value="fr" {% if target_language == 'fr' %}selected{% endif %}>Français</option>
+                        <option value="es" {% if target_language == 'es' %}selected{% endif %}>Espagnol</option>
+                        <option value="de" {% if target_language == 'de' %}selected{% endif %}>Allemand</option>
+                        <option value="it" {% if target_language == 'it' %}selected{% endif %}>Italien</option>
+                        <option value="pt" {% if target_language == 'pt' %}selected{% endif %}>Portugais</option>
+                        <option value="pl" {% if source_language == 'pl' %}selected{% endif %}>polonais</option>
+                    </select>
+                    <textarea rows="10" readonly>{{ translated_text }}</textarea>
+                </div>
+            </div>
+            <button type="submit">Translate</button>
+        </form>
+        {% if detected_language %}
+            <p>Langue détectée: {{ detected_language }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
