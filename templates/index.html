@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
-    <title>Acceuil</title>
+    <title>Poogle Praduction</title>
 </head>
 <body>
-    <h1 id="title">Traducteur en ligne</h1>
+    <h1 id="title">Outil de Traduction</h1>
+    <form action="{{ url_for('translate') }}" method="post">
+        <label for="text">Entrée :</label><br>
+        <textarea id="text" name="text" ></textarea><br><br>
+        <label for="language">Langue de destination :</label><br>
+        <select id="language" name="language">
+            {% for code, lang in languages.items() %}
+                <option value="{{ code }}">{{ lang }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Traduire">
+    </form>
 </body>
 </html>
