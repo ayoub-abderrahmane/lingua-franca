@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d83030;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.image_logo {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+h1 {
+  color: #d83030;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+select, button {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #5300ed;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #1911ff;
+}
+
+.translation-section {
+  display: flex;
+  justify-content: space-between; /* Cela place les éléments côte à côte avec un espace entre eux */
+  align-items: stretch; /* Assure que les éléments s'étirent pour remplir la hauteur disponible */
+}
+
+.input-section, .output-section {
+
+  margin : 0;
+  padding : 0;
+  flex: 2;
+  display: flex;
+  flex-direction: column; /* Change la direction pour afficher les éléments en colonne */
+  align-items: flex-start; /* Aligne les éléments au début du conteneur */
+}
+
+h2 {
+  margin-top: 20px;
+  color: #333;
+}
