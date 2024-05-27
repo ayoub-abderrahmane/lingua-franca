@@ -1,2 +1,4 @@
 pip install flask
 pip install googletrans==4.0.0-rc1
+
+before running the program, make sure you have created a virtual environment
