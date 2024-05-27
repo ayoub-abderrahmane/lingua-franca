@@ -27,11 +27,10 @@ We were asked to create a Flask application in which a user can enter the desire
 
 # Application 
 
-Here is our final product with the various screenshots of the application below. 
+Here is our final product with the screenshot of the application below. 
 
 ### MENU 
 
 ![1](https://github.com/ayoub-abderrahmane/lingua-franca/assets/146713129/61623e41-7e1e-4a0d-ab66-9bbf41c38e45)
 
 
-### TEST 
